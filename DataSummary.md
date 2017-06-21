@@ -1,6 +1,11 @@
 # Skeleton of Ideas
 
-Categories | Data | Data Source | Management | Visualisation | Analysis | Checklist |
+Categories | Dataset | Source | Management | Visualisation | Analysis | Checklist |
 ------------ | ------------- | ------------- | ------------- | ------------- | -------------| ------------- |
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+Biochemistry | Content from cell 2
+Behaviour | Content in the second column
+Conservation Ecology |
+Ecology |
+Genetics | Expression of Hox genes (Location and/or time of exp) | NCBI GenBank | Python Pandas | Distance Matrix & Heatmap | CLuster Analysis |
+Evolutionary Biology | Haemoglobin genes | NCBI GenBank | Biopython | Phylogenetic tree | 
+
