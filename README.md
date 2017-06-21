@@ -1,1 +1,1 @@
-# UPBS
+# Data Practicals
