@@ -10,6 +10,6 @@ Conservation Ecology | Distribution of species | FYP of batchmates on trees in L
 Conservation Ecology | Climate data?
 Ecology | Cricket mating | BE module | Poisson distributions | Barplots | t-test | |thinking up in process|
 Ecology | Social behaviour & size of animal | | Categorical Data | Scatterplots | Do smaller animals tend to grp together more than larger animals? | | |
-Genetics | Expression of Hox genes/ C. elegans Ras pathway / Arabidopsis morphology (Location and/or time) | NCBI GenBank/ for C.elegans, Arabidopsis: CDB module  | Python Pandas | Distance Matrix & Heatmap, Gene expression network | Cluster Analysis || might be too complicated
-Evolutionary Biology | Haemoglobin genes/ribosomal genes | NCBI GenBank | Biopython | Phylogenetic tree of organisms based on haemoglobin genes ||| We might have done this in some module I cant remember where.|
+Genetics | Expression of Hox genes/ C. elegans Ras pathway / Arabidopsis morphology (Location and/or time) | NCBI GenBank/ for C.elegans, Arabidopsis: CDB module, Expression pattern similarities  | Python Pandas | Distance Matrix & Heatmap, Gene expression network | Cluster Analysis || might be too complicated
+Evolutionary Biology | Haemoglobin genes/ribosomal genes | NCBI GenBank | Biopython, Sequence Similarity | Phylogenetic tree of organisms based on haemoglobin genes ||| We might have done this in some module I cant remember where.|
 
