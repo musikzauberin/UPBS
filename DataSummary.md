@@ -2,7 +2,7 @@
 
 Categories | Dataset | Source | Management | Visualisation | Analysis | Packages | Comments |
 --- | --- |--- |--- |--- |--- |--- |--- |
-Biochemistry | Concentration of metabolites in cells| | Conversion of units? Mol to g/L | Concentration over time | Model fitting, t test between different cells? | Numpy/Scipy, ggplot | I dont really know whats there in Biochemistry... |
+Biochemistry | Concentration of metabolites in cells| | Conversion of units? Mol to g/L | Concentration over time | Model fitting, t test bet different cells? | Numpy/Scipy, ggplot | I dont really know whats there in Biochemistry... |
 Biochemistry | Firing of neurons, [Na+], [K+], timing of depolarisation and hyperpolarisation | | horizontal to vertical table, extracting subset of data from dataset| concentration over time, barplots | threshold of NA+/K+ required for firing of neurons | 
 Biochemistry | [photosynthesis substrates] or [circadian proteins] or [flowering proteins] vs amount of light || look at above biochemistry examples |
 Behaviour | Monkey, time used for foraging, etc. | Behavioural Ecology Module | Dealing with NA and discrete time data | barplots or pie charts? | In the BE prac : if parvorders, age, species, social grouping affects behaviour | might want to do something different from BE module...
