@@ -1,6 +1,12 @@
 # Clear objects
 rm(list=ls())
 
+################################################
+# Set Directory
+getwd()
+setwd("/Users/jialelim/Documents/github/UPBS/newCode")
+################################################
+
 # import Data
 MyDF <- read.csv("../Data/EcolArchives-E089-51-D1.csv")
 

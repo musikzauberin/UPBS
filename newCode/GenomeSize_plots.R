@@ -2,6 +2,7 @@
 
 # This script uses genome size and morphology data to explore
 # t tests and F tests in R
+# Added plotting scatterplots using ggplot2 # Newly Added
 
 ################################################
 # Set Directory
@@ -93,9 +94,52 @@ legend(40,2, legend=levels(genome$Suborder),
 dev.off() #Close the pdf file
 
 ######################################################
+# Newly added
 # (9) Plot scatterplots using ggplot2
 library(ggplot2)
 
+# basic plot
+# differentiate Suborder by shape
+p1 <- ggplot(genome, aes(x = TotalLength, y = GenomeSize, shape = Suborder)) +
+  geom_point() 
+p1
+
+# differentiate Suborder by color
+p1 <- ggplot(genome, aes(x = TotalLength, y = GenomeSize, color = Suborder)) +
+  geom_point() 
+p1
+
+# differentiate Suborder by color and shape
+p1 <- ggplot(genome, aes(x = TotalLength, y = GenomeSize, color = Suborder, shape = Suborder)) +
+  geom_point() 
+p1
+
+
+# manually adjust size and shape of plot character
+p2 <- ggplot(genome, aes(x = TotalLength, y = GenomeSize, shape = Suborder, color = Suborder)) +
+  geom_point(size = 3)  + # increase plot character size
+  scale_shape_manual(values = c(1,3)) # change plot character shape
+p2
+
+# change plot background/theme
+p3 <- p2 + theme_set(theme_bw())
+p3
+
+# set size of text for axis and for titles
+text <- element_text(size = 14)
+bold.16.text <- element_text(face = "bold", size = 16)
+
+p4 <- p3 + labs(title = "Damselflies and Dragonflies", x = "Total Length / mm ", y = "Genome Size / pg ") +
+  theme(title = bold.16.text, axis.title = bold.16.text, axis.text = text)
+
+p4
+
+# SAVE FILE AS A PDF:
+pdf('../Results/GenomeSize_ggplot.pdf', height=5, width=6) #Open the pdf file
+
+p4
+
+dev.off() #Close the pdf file
 
 
 ######################## (10) ##########################

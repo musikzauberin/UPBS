@@ -105,7 +105,8 @@ SpeciesSubset <- droplevels(SpeciesSubset)
 str(SpeciesSubset)
 
 require(ggplot2)
-ggplot(MyWrangledData, aes(x=Species, y=Count, color=Block)) +
+par(mfrow=c(1,2))
+ggplot(BlockA, aes(x=Species, y=Count, color=Block)) +
   geom_point(shape=1) +
   scale_colour_hue(l=50) + # Use a slightly darker palette than normal 
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
