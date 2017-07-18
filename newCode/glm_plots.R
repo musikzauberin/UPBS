@@ -27,7 +27,7 @@ str(coloniesCN)
 coloniesCN <- droplevels(coloniesCN)
 str(coloniesCN)
 
-# 5) Look at the strains by treament
+# 5a) Look at the strains by treament
 library(lattice)
 bwplot(logCC ~ Strain | Treatment, data=coloniesCN)
 
@@ -37,12 +37,54 @@ tab <- tapply(coloniesCN$ColonyCount, list(coloniesCN$Treatment,
 barplot(tab, beside=TRUE)
 
 ######################################################
-# (10) Plot barplot using ggplot2
+# 5b) Plot boxplot using ggplot2 # Newly Added
 library(ggplot2)
 
+p1 <- ggplot(coloniesCN, aes(x = Strain, y = logCC, color = Treatment)) +
+  stat_boxplot(geom = 'errorbar') + # add whiskers to boxplots
+  geom_boxplot() # add boxplots
+p1
+
+# set text and text size for axis
+p2 <- p1 + labs(x = "Strains", y = "log Colony Count")
+
+p2
+
+# save plot as pdf
+ggsave('../Results/PracDataBoxplot_ggplot.pdf', height=5, width=6) #Open the pdf file
+
+#############################################################
+# 5b) Plot barplot using ggplot2 # Newly Added
+# ggplots do not read matrix, need to convert table to dataframe
+Bactframe <- as.data.frame(tab)
+label(Bactframe[["age"]]) <- "Age in years"
+label(Bactframe[["sex"]]) <- "Sex of the participant"
+
+
+barplot1 <- ggplot(coloniesCN, aes(x = Strain, y = logCC, fill = Treatment)) +
+  geom_bar(stat = "identity", position=position_dodge(), # add barplots, unstacked/dodged barplot
+           color = "black") # add black outlines
+barplot1
+
+# lets change the colours
+barplot2 <-  barplot1 + scale_fill_brewer(palette="Paired")
+barplot2
+
+# add labels to barplots
+barplot3 <- barplot2 +
+  geom_text(aes(label=c()), vjust=1.6, color="white", position = position_dodge(0.9), size=3.5)
+
+barplot3
+
+# set text and text size for axis
+p2 <- p1 + labs(x = "Strains", y = "log Colony Count")
+
+p2
+
+# save plot as pdf
+ggsave('../Results/PracDataBoxplot_ggplot.pdf', height=5, width=6) #Open the pdf file
 
 ######################################################
-
 
 # 6) A test linear model
 modLM <- lm(logCC ~ Strain * Treatment, data=coloniesCN)

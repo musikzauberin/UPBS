@@ -135,11 +135,7 @@ p4 <- p3 + labs(title = "Damselflies and Dragonflies", x = "Total Length / mm ",
 p4
 
 # SAVE FILE AS A PDF:
-pdf('../Results/GenomeSize_ggplot.pdf', height=5, width=6) #Open the pdf file
-
-p4
-
-dev.off() #Close the pdf file
+ggsave('../Results/GenomeSize_ggplot.pdf', height=5, width=6)
 
 
 ######################## (10) ##########################
