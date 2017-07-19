@@ -4,6 +4,7 @@
 # Set Directory
 getwd()
 setwd("/Users/jialelim/Documents/github/UPBS/newCode")
+# Added plotting scatterplots and lm using ggplot2 # Newly Added
 ################################################
 
 # This script uses genome size and morphology data to explore regression in R
