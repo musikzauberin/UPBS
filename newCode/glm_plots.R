@@ -53,13 +53,19 @@ p1 <- ggplot(coloniesCN, aes(x = Strain, y = logCC, color = Treatment)) +   # co
   scale_fill_manual(values = c('palevioletred3', 'skyblue4'))               # manually choose fill color
 p1
 
-# set text and text size for axis
+# set text for axis
 p2 <- p1 + labs(x = "Strains", y = "log Colony Count")
 
 p2
 
 # save plot as pdf
-ggsave('../Results/PracDataBoxplot_ggplot.pdf', height=5, width=6) #Open the pdf file
+ggsave('../Results/PracDataBoxplot_ggplot.pdf', height=5, width=6) 
+
+# OR multi-faceted plots
+p3 <- p2 + facet_grid(Treatment ~ .)
+p3
+
+ggsave('../Results/PracDataBoxplot_ggplot2.pdf', height=5, width=6)
 
 #############################################################
 # 5b) Plot barplot using ggplot2 # Newly Added
