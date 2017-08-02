@@ -3,11 +3,11 @@
 
 old script | new script | Newly Added | New Plot Name | Old Plot Name | 
 --- | --- | --- |---: |---: |
-GenomeSize.R | GenomeSize_plots.R | Scatterplot: Total Length ~ Genome Size | GenomeSize_ggplot.pdf | GenomeSize.pdf | 
+GenomeSize.R | GenomeSize_plots.R | Scatterplot: <br/> Total Length ~ Genome Size | GenomeSize_ggplot.pdf | GenomeSize.pdf | 
 regress.R | regress_plots.R | Scatterplot: Body Weight ~ Genome Size & LM | Diagmod_ggplot.pdf | DiagMod.pdf | 
 glm.R | glm_plots.R | Boxplot: logColonyCount~Strain, separated by Treatment | PracDataBoxplot.pdf | PracDataBoxplot_ggplot.pdf <br/> PracDataBoxplot_ggplot2.pdf |
 glm.R | glm_plots.R | Barplot: logColonyCount~Strain| PracDataBarplot.pdf | PracDataBarplot_ggplot.pdf|
-PP_Lattice.R | PP_ggplot.R | Scatterplot: PreyMass~PredatorMass & LM <br/>  Ratio between PredatorMass and PreyMass: Jitterplot, Boxplot, Histogram, Density plot, Multi-faceted plots, Subset of Multi-faceted plots|--- |--- |
+PP_Lattice.R | PP_ggplot.R | Scatterplot: PreyMass~PredatorMass <br/>  Ratio between PredatorMass and PreyMass: <br/> Jitterplot,Boxplot,Histogram, Density plot, Multi-faceted plots, Subset of Multi-faceted plots|--- |--- |
 
 # New datasets
 
