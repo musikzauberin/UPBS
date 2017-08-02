@@ -1,1 +1,1 @@
-# Data Practicals
+# Undergraduate Practical Bursary Scheme
