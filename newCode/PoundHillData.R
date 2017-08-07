@@ -127,14 +127,23 @@ sum(SpeciesRichness$SpeciesNo)
 ############# Data Visualisation #############
 library(ggplot2)
 
-boxplot <- ggplot(MyDF, aes(x = Type.of.feeding.interaction, y = log(Prey.mass/Predator.mass))) +
+boxplot <- ggplot(SpeciesRichness, aes(x = Cultivation, y = SpeciesNo)) +
   stat_boxplot(geom = 'errorbar') +           # add whiskers to boxplots
-  geom_boxplot(aes(fill = Type.of.feeding.interaction), lwd = 0.6)  +                       
-  # add boxplot, fill boxplot according to color of feeding interaction and lwd dictates thickness of outlines
-  labs(x = "Type of feeding interaction", y = "log (Prey mass / Predator Mass)") + # x and y axis labels
+  geom_boxplot(aes(fill = Cultivation), alpha = 0.3)  + 
+  geom_jitter(aes(fill = Cultivation), width = 0.3, alpha = 0.5, size = 2) +
+  labs(x = "Cultivation month", y = "Mean Number of Species") + # x and y axis labels
   theme(legend.position="none") # remove all legends
 boxplot
 
+ggsave('../Results/PoundHill_CultivationSpeciesRichness.pdf', height=5, width=10)
 
-ggsave('../Results/PP_boxplot.pdf', height=5, width=10)
+boxplot2 <- ggplot(SpeciesRichness, aes(x = Block, y = SpeciesNo)) +
+  stat_boxplot(geom = 'errorbar') +           # add whiskers to boxplots
+  geom_boxplot(aes(fill = Block), alpha = 0.3)  + 
+  geom_jitter(aes(fill = Block), width = 0.3, alpha = 0.5, size = 2) +
+  labs(x = "Treatment Block", y = "Mean Number of Species") + # x and y axis labels
+  theme(legend.position="none") # remove all legends
+boxplot2
+
+ggsave('../Results/PoundHill_BlockSpeciesRichness.pdf', height=5, width=10)
 
