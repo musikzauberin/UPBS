@@ -104,16 +104,37 @@ MyNewDF <- melt(tempDF, id=c("Cultivation", "Block", "Plot"),
 head(MyNewDF)
 str(MyNewDF)
 
+# export data as .csv file
+write.csv(MyNewDF, file = "../Results/PoundHillMean.csv")
+
 # duplicate MyNewDF and replace all counts more than zero with 1 (Presence-Absence Data)
-PADF <- MyNewDF
-PADF[PADF[,5] > 0, 5] <- 1 #{PADF[,5] > 0}: all values more than 0 in the fifth column of PADF
-head(PADF)
+PAData <- MyNewDF
+PAData[PAData[,5] > 0, 5] <- 1 #{PADF[,5] > 0}: all values more than 0 in the fifth column of PADF
+head(PAData)
 
-# 
-SpeciesPerPlot <- tapply(PlotData$Count, list(PlotData$Plot), sum, na.rm = TRUE)
+# calculate species richness per plot
+SpeciesRichness <- ddply(PAData, c("Cultivation", "Block", "Plot"), summarise, SpeciesNo = sum(Count))
+SpeciesRichness
 
-SpeciesPerPlot
+# export data as .csv file
+write.csv(SpeciesRichness, file = "../Results/PoundHillSpeciesRichness.csv")
 
-# Plotting
-plot(SpeciesPerPlot)
+# calculate Shannon's diversity index
+sum(SpeciesRichness$SpeciesNo)
+
+
+
+############# Data Visualisation #############
+library(ggplot2)
+
+boxplot <- ggplot(MyDF, aes(x = Type.of.feeding.interaction, y = log(Prey.mass/Predator.mass))) +
+  stat_boxplot(geom = 'errorbar') +           # add whiskers to boxplots
+  geom_boxplot(aes(fill = Type.of.feeding.interaction), lwd = 0.6)  +                       
+  # add boxplot, fill boxplot according to color of feeding interaction and lwd dictates thickness of outlines
+  labs(x = "Type of feeding interaction", y = "log (Prey mass / Predator Mass)") + # x and y axis labels
+  theme(legend.position="none") # remove all legends
+boxplot
+
+
+ggsave('../Results/PP_boxplot.pdf', height=5, width=10)
 

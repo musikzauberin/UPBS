@@ -1,0 +1,493 @@
+"","Cultivation","Block","Plot","Species","Count"
+"1","october","a","1","Achillea millefolium",65.6
+"2","march","d","10","Achillea millefolium",45.3333333333333
+"3","october","d","11","Achillea millefolium",36.8
+"4","may","d","12","Achillea millefolium",0
+"5","may","a","2","Achillea millefolium",6.4
+"6","march","a","3","Achillea millefolium",29.3333333333333
+"7","may","b","4","Achillea millefolium",0
+"8","march","b","5","Achillea millefolium",65.6
+"9","october","b","6","Achillea millefolium",10
+"10","march","c","7","Achillea millefolium",358.4
+"11","october","c","8","Achillea millefolium",4.8
+"12","may","c","9","Achillea millefolium",19.2
+"13","october","a","1","Agrostis gigantea",24
+"14","march","d","10","Agrostis gigantea",1037.33333333333
+"15","october","d","11","Agrostis gigantea",430.4
+"16","may","d","12","Agrostis gigantea",594.666666666667
+"17","may","a","2","Agrostis gigantea",3.2
+"18","march","a","3","Agrostis gigantea",181.333333333333
+"19","may","b","4","Agrostis gigantea",616
+"20","march","b","5","Agrostis gigantea",208
+"21","october","b","6","Agrostis gigantea",518
+"22","march","c","7","Agrostis gigantea",243.2
+"23","october","c","8","Agrostis gigantea",1267.2
+"24","may","c","9","Agrostis gigantea",393.6
+"25","october","a","1","Anagallis arvensis",0
+"26","march","d","10","Anagallis arvensis",2.66666666666667
+"27","october","d","11","Anagallis arvensis",38.4
+"28","may","d","12","Anagallis arvensis",90.6666666666667
+"29","may","a","2","Anagallis arvensis",3.2
+"30","march","a","3","Anagallis arvensis",0
+"31","may","b","4","Anagallis arvensis",4.8
+"32","march","b","5","Anagallis arvensis",0
+"33","october","b","6","Anagallis arvensis",0
+"34","march","c","7","Anagallis arvensis",0
+"35","october","c","8","Anagallis arvensis",11.2
+"36","may","c","9","Anagallis arvensis",40
+"37","october","a","1","Anchusa arvensis",8
+"38","march","d","10","Anchusa arvensis",0
+"39","october","d","11","Anchusa arvensis",0
+"40","may","d","12","Anchusa arvensis",0
+"41","may","a","2","Anchusa arvensis",1.6
+"42","march","a","3","Anchusa arvensis",0
+"43","may","b","4","Anchusa arvensis",12.8
+"44","march","b","5","Anchusa arvensis",0
+"45","october","b","6","Anchusa arvensis",0
+"46","march","c","7","Anchusa arvensis",0
+"47","october","c","8","Anchusa arvensis",1.6
+"48","may","c","9","Anchusa arvensis",35.2
+"49","october","a","1","Anisantha sterilis",8
+"50","march","d","10","Anisantha sterilis",14.6666666666667
+"51","october","d","11","Anisantha sterilis",4.8
+"52","may","d","12","Anisantha sterilis",58.6666666666667
+"53","may","a","2","Anisantha sterilis",0
+"54","march","a","3","Anisantha sterilis",0
+"55","may","b","4","Anisantha sterilis",435.2
+"56","march","b","5","Anisantha sterilis",0
+"57","october","b","6","Anisantha sterilis",2
+"58","march","c","7","Anisantha sterilis",60.8
+"59","october","c","8","Anisantha sterilis",0
+"60","may","c","9","Anisantha sterilis",385.6
+"61","october","a","1","Aphanes australis",0
+"62","march","d","10","Aphanes australis",0
+"63","october","d","11","Aphanes australis",0
+"64","may","d","12","Aphanes australis",2.66666666666667
+"65","may","a","2","Aphanes australis",0
+"66","march","a","3","Aphanes australis",0
+"67","may","b","4","Aphanes australis",0
+"68","march","b","5","Aphanes australis",0
+"69","october","b","6","Aphanes australis",0
+"70","march","c","7","Aphanes australis",0
+"71","october","c","8","Aphanes australis",0
+"72","may","c","9","Aphanes australis",0
+"73","october","a","1","Artemesia vulgaris",3.2
+"74","march","d","10","Artemesia vulgaris",22.6666666666667
+"75","october","d","11","Artemesia vulgaris",0
+"76","may","d","12","Artemesia vulgaris",0
+"77","may","a","2","Artemesia vulgaris",6.4
+"78","march","a","3","Artemesia vulgaris",94.6666666666667
+"79","may","b","4","Artemesia vulgaris",4.8
+"80","march","b","5","Artemesia vulgaris",164.8
+"81","october","b","6","Artemesia vulgaris",8
+"82","march","c","7","Artemesia vulgaris",155.2
+"83","october","c","8","Artemesia vulgaris",0
+"84","may","c","9","Artemesia vulgaris",0
+"85","october","a","1","Bromus hordaceus",0
+"86","march","d","10","Bromus hordaceus",0
+"87","october","d","11","Bromus hordaceus",0
+"88","may","d","12","Bromus hordaceus",58.6666666666667
+"89","may","a","2","Bromus hordaceus",0
+"90","march","a","3","Bromus hordaceus",0
+"91","may","b","4","Bromus hordaceus",0
+"92","march","b","5","Bromus hordaceus",0
+"93","october","b","6","Bromus hordaceus",0
+"94","march","c","7","Bromus hordaceus",0
+"95","october","c","8","Bromus hordaceus",0
+"96","may","c","9","Bromus hordaceus",94.4
+"97","october","a","1","Cerastium glomeratun",4.8
+"98","march","d","10","Cerastium glomeratun",0
+"99","october","d","11","Cerastium glomeratun",0
+"100","may","d","12","Cerastium glomeratun",0
+"101","may","a","2","Cerastium glomeratun",0
+"102","march","a","3","Cerastium glomeratun",0
+"103","may","b","4","Cerastium glomeratun",0
+"104","march","b","5","Cerastium glomeratun",0
+"105","october","b","6","Cerastium glomeratun",2
+"106","march","c","7","Cerastium glomeratun",0
+"107","october","c","8","Cerastium glomeratun",0
+"108","may","c","9","Cerastium glomeratun",0
+"109","october","a","1","Chenopodium album",0
+"110","march","d","10","Chenopodium album",0
+"111","october","d","11","Chenopodium album",0
+"112","may","d","12","Chenopodium album",0
+"113","may","a","2","Chenopodium album",19.2
+"114","march","a","3","Chenopodium album",0
+"115","may","b","4","Chenopodium album",4.8
+"116","march","b","5","Chenopodium album",0
+"117","october","b","6","Chenopodium album",0
+"118","march","c","7","Chenopodium album",0
+"119","october","c","8","Chenopodium album",0
+"120","may","c","9","Chenopodium album",0
+"121","october","a","1","Cirsium arvense",8
+"122","march","d","10","Cirsium arvense",0
+"123","october","d","11","Cirsium arvense",0
+"124","may","d","12","Cirsium arvense",0
+"125","may","a","2","Cirsium arvense",16
+"126","march","a","3","Cirsium arvense",0
+"127","may","b","4","Cirsium arvense",0
+"128","march","b","5","Cirsium arvense",0
+"129","october","b","6","Cirsium arvense",0
+"130","march","c","7","Cirsium arvense",0
+"131","october","c","8","Cirsium arvense",0
+"132","may","c","9","Cirsium arvense",1.6
+"133","october","a","1","Conyza canadensis",0
+"134","march","d","10","Conyza canadensis",0
+"135","october","d","11","Conyza canadensis",6.4
+"136","may","d","12","Conyza canadensis",0
+"137","may","a","2","Conyza canadensis",0
+"138","march","a","3","Conyza canadensis",0
+"139","may","b","4","Conyza canadensis",0
+"140","march","b","5","Conyza canadensis",0
+"141","october","b","6","Conyza canadensis",0
+"142","march","c","7","Conyza canadensis",0
+"143","october","c","8","Conyza canadensis",0
+"144","may","c","9","Conyza canadensis",0
+"145","october","a","1","Crepis capillaris",0
+"146","march","d","10","Crepis capillaris",4
+"147","october","d","11","Crepis capillaris",0
+"148","may","d","12","Crepis capillaris",5.33333333333333
+"149","may","a","2","Crepis capillaris",0
+"150","march","a","3","Crepis capillaris",0
+"151","may","b","4","Crepis capillaris",1.6
+"152","march","b","5","Crepis capillaris",0
+"153","october","b","6","Crepis capillaris",0
+"154","march","c","7","Crepis capillaris",0
+"155","october","c","8","Crepis capillaris",8
+"156","may","c","9","Crepis capillaris",0
+"157","october","a","1","Crepis paludos",0
+"158","march","d","10","Crepis paludos",0
+"159","october","d","11","Crepis paludos",8
+"160","may","d","12","Crepis paludos",0
+"161","may","a","2","Crepis paludos",0
+"162","march","a","3","Crepis paludos",0
+"163","may","b","4","Crepis paludos",0
+"164","march","b","5","Crepis paludos",0
+"165","october","b","6","Crepis paludos",0
+"166","march","c","7","Crepis paludos",0
+"167","october","c","8","Crepis paludos",0
+"168","may","c","9","Crepis paludos",0
+"169","october","a","1","Elytrigia repens",0
+"170","march","d","10","Elytrigia repens",40
+"171","october","d","11","Elytrigia repens",0
+"172","may","d","12","Elytrigia repens",2.66666666666667
+"173","may","a","2","Elytrigia repens",0
+"174","march","a","3","Elytrigia repens",0
+"175","may","b","4","Elytrigia repens",76.8
+"176","march","b","5","Elytrigia repens",3.2
+"177","october","b","6","Elytrigia repens",0
+"178","march","c","7","Elytrigia repens",68.8
+"179","october","c","8","Elytrigia repens",0
+"180","may","c","9","Elytrigia repens",12.8
+"181","october","a","1","Epilobium ciliatum",1.6
+"182","march","d","10","Epilobium ciliatum",8
+"183","october","d","11","Epilobium ciliatum",0
+"184","may","d","12","Epilobium ciliatum",0
+"185","may","a","2","Epilobium ciliatum",0
+"186","march","a","3","Epilobium ciliatum",0
+"187","may","b","4","Epilobium ciliatum",0
+"188","march","b","5","Epilobium ciliatum",3.2
+"189","october","b","6","Epilobium ciliatum",4
+"190","march","c","7","Epilobium ciliatum",0
+"191","october","c","8","Epilobium ciliatum",0
+"192","may","c","9","Epilobium ciliatum",0
+"193","october","a","1","Erodium cicutarium",0
+"194","march","d","10","Erodium cicutarium",0
+"195","october","d","11","Erodium cicutarium",0
+"196","may","d","12","Erodium cicutarium",0
+"197","may","a","2","Erodium cicutarium",43.2
+"198","march","a","3","Erodium cicutarium",0
+"199","may","b","4","Erodium cicutarium",33.6
+"200","march","b","5","Erodium cicutarium",0
+"201","october","b","6","Erodium cicutarium",0
+"202","march","c","7","Erodium cicutarium",0
+"203","october","c","8","Erodium cicutarium",0
+"204","may","c","9","Erodium cicutarium",6.4
+"205","october","a","1","Fallopia convolvulus",0
+"206","march","d","10","Fallopia convolvulus",6.66666666666667
+"207","october","d","11","Fallopia convolvulus",0
+"208","may","d","12","Fallopia convolvulus",0
+"209","may","a","2","Fallopia convolvulus",57.6
+"210","march","a","3","Fallopia convolvulus",0
+"211","may","b","4","Fallopia convolvulus",4.8
+"212","march","b","5","Fallopia convolvulus",0
+"213","october","b","6","Fallopia convolvulus",72
+"214","march","c","7","Fallopia convolvulus",3.2
+"215","october","c","8","Fallopia convolvulus",0
+"216","may","c","9","Fallopia convolvulus",0
+"217","october","a","1","Festuca rubra",0
+"218","march","d","10","Festuca rubra",0
+"219","october","d","11","Festuca rubra",0
+"220","may","d","12","Festuca rubra",0
+"221","may","a","2","Festuca rubra",0
+"222","march","a","3","Festuca rubra",0
+"223","may","b","4","Festuca rubra",0
+"224","march","b","5","Festuca rubra",0
+"225","october","b","6","Festuca rubra",0
+"226","march","c","7","Festuca rubra",3.2
+"227","october","c","8","Festuca rubra",0
+"228","may","c","9","Festuca rubra",0
+"229","october","a","1","Geranium molle",0
+"230","march","d","10","Geranium molle",0
+"231","october","d","11","Geranium molle",0
+"232","may","d","12","Geranium molle",10.6666666666667
+"233","may","a","2","Geranium molle",8
+"234","march","a","3","Geranium molle",0
+"235","may","b","4","Geranium molle",9.6
+"236","march","b","5","Geranium molle",0
+"237","october","b","6","Geranium molle",0
+"238","march","c","7","Geranium molle",0
+"239","october","c","8","Geranium molle",0
+"240","may","c","9","Geranium molle",51.2
+"241","october","a","1","Holcus mollis",996.8
+"242","march","d","10","Holcus mollis",213.333333333333
+"243","october","d","11","Holcus mollis",702.4
+"244","may","d","12","Holcus mollis",93.3333333333333
+"245","may","a","2","Holcus mollis",705.6
+"246","march","a","3","Holcus mollis",188
+"247","may","b","4","Holcus mollis",3.2
+"248","march","b","5","Holcus mollis",142.4
+"249","october","b","6","Holcus mollis",756
+"250","march","c","7","Holcus mollis",369.6
+"251","october","c","8","Holcus mollis",1068.8
+"252","may","c","9","Holcus mollis",27.2
+"253","october","a","1","Hypochaeris radicata",0
+"254","march","d","10","Hypochaeris radicata",0
+"255","october","d","11","Hypochaeris radicata",0
+"256","may","d","12","Hypochaeris radicata",2.66666666666667
+"257","may","a","2","Hypochaeris radicata",0
+"258","march","a","3","Hypochaeris radicata",0
+"259","may","b","4","Hypochaeris radicata",0
+"260","march","b","5","Hypochaeris radicata",0
+"261","october","b","6","Hypochaeris radicata",0
+"262","march","c","7","Hypochaeris radicata",0
+"263","october","c","8","Hypochaeris radicata",0
+"264","may","c","9","Hypochaeris radicata",0
+"265","october","a","1","Lactuca serriola",0
+"266","march","d","10","Lactuca serriola",1.33333333333333
+"267","october","d","11","Lactuca serriola",0
+"268","may","d","12","Lactuca serriola",0
+"269","may","a","2","Lactuca serriola",0
+"270","march","a","3","Lactuca serriola",0
+"271","may","b","4","Lactuca serriola",0
+"272","march","b","5","Lactuca serriola",0
+"273","october","b","6","Lactuca serriola",0
+"274","march","c","7","Lactuca serriola",0
+"275","october","c","8","Lactuca serriola",0
+"276","may","c","9","Lactuca serriola",0
+"277","october","a","1","Medicago lupulina ",0
+"278","march","d","10","Medicago lupulina ",352
+"279","october","d","11","Medicago lupulina ",3.2
+"280","may","d","12","Medicago lupulina ",0
+"281","may","a","2","Medicago lupulina ",0
+"282","march","a","3","Medicago lupulina ",136
+"283","may","b","4","Medicago lupulina ",0
+"284","march","b","5","Medicago lupulina ",17.6
+"285","october","b","6","Medicago lupulina ",14
+"286","march","c","7","Medicago lupulina ",80
+"287","october","c","8","Medicago lupulina ",19.2
+"288","may","c","9","Medicago lupulina ",0
+"289","october","a","1","Myosotis arvensis",0
+"290","march","d","10","Myosotis arvensis",0
+"291","october","d","11","Myosotis arvensis",0
+"292","may","d","12","Myosotis arvensis",0
+"293","may","a","2","Myosotis arvensis",0
+"294","march","a","3","Myosotis arvensis",0
+"295","may","b","4","Myosotis arvensis",0
+"296","march","b","5","Myosotis arvensis",0
+"297","october","b","6","Myosotis arvensis",6
+"298","march","c","7","Myosotis arvensis",0
+"299","october","c","8","Myosotis arvensis",14.4
+"300","may","c","9","Myosotis arvensis",0
+"301","october","a","1","Plantago lanceolata ",0
+"302","march","d","10","Plantago lanceolata ",0
+"303","october","d","11","Plantago lanceolata ",0
+"304","may","d","12","Plantago lanceolata ",0
+"305","may","a","2","Plantago lanceolata ",0
+"306","march","a","3","Plantago lanceolata ",1.33333333333333
+"307","may","b","4","Plantago lanceolata ",0
+"308","march","b","5","Plantago lanceolata ",0
+"309","october","b","6","Plantago lanceolata ",2
+"310","march","c","7","Plantago lanceolata ",12.8
+"311","october","c","8","Plantago lanceolata ",0
+"312","may","c","9","Plantago lanceolata ",0
+"313","october","a","1","Polpaver dubium",0
+"314","march","d","10","Polpaver dubium",0
+"315","october","d","11","Polpaver dubium",0
+"316","may","d","12","Polpaver dubium",0
+"317","may","a","2","Polpaver dubium",0
+"318","march","a","3","Polpaver dubium",0
+"319","may","b","4","Polpaver dubium",0
+"320","march","b","5","Polpaver dubium",0
+"321","october","b","6","Polpaver dubium",4
+"322","march","c","7","Polpaver dubium",0
+"323","october","c","8","Polpaver dubium",0
+"324","may","c","9","Polpaver dubium",0
+"325","october","a","1","Raphanus raphanistrum ",0
+"326","march","d","10","Raphanus raphanistrum ",0
+"327","october","d","11","Raphanus raphanistrum ",0
+"328","may","d","12","Raphanus raphanistrum ",0
+"329","may","a","2","Raphanus raphanistrum ",0
+"330","march","a","3","Raphanus raphanistrum ",0
+"331","may","b","4","Raphanus raphanistrum ",0
+"332","march","b","5","Raphanus raphanistrum ",0
+"333","october","b","6","Raphanus raphanistrum ",16
+"334","march","c","7","Raphanus raphanistrum ",0
+"335","october","c","8","Raphanus raphanistrum ",1.6
+"336","may","c","9","Raphanus raphanistrum ",0
+"337","october","a","1","Rumex acetosella",51.2
+"338","march","d","10","Rumex acetosella",14.6666666666667
+"339","october","d","11","Rumex acetosella",70.4
+"340","may","d","12","Rumex acetosella",18.6666666666667
+"341","may","a","2","Rumex acetosella",14.4
+"342","march","a","3","Rumex acetosella",12
+"343","may","b","4","Rumex acetosella",6.4
+"344","march","b","5","Rumex acetosella",8
+"345","october","b","6","Rumex acetosella",80
+"346","march","c","7","Rumex acetosella",51.2
+"347","october","c","8","Rumex acetosella",16
+"348","may","c","9","Rumex acetosella",0
+"349","october","a","1","Rumex crispus",0
+"350","march","d","10","Rumex crispus",1.33333333333333
+"351","october","d","11","Rumex crispus",0
+"352","may","d","12","Rumex crispus",8
+"353","may","a","2","Rumex crispus",0
+"354","march","a","3","Rumex crispus",2.66666666666667
+"355","may","b","4","Rumex crispus",0
+"356","march","b","5","Rumex crispus",0
+"357","october","b","6","Rumex crispus",0
+"358","march","c","7","Rumex crispus",8
+"359","october","c","8","Rumex crispus",9.6
+"360","may","c","9","Rumex crispus",16
+"361","october","a","1","Rumex obtusifolia",0
+"362","march","d","10","Rumex obtusifolia",8
+"363","october","d","11","Rumex obtusifolia",0
+"364","may","d","12","Rumex obtusifolia",0
+"365","may","a","2","Rumex obtusifolia",0
+"366","march","a","3","Rumex obtusifolia",24
+"367","may","b","4","Rumex obtusifolia",0
+"368","march","b","5","Rumex obtusifolia",0
+"369","october","b","6","Rumex obtusifolia",0
+"370","march","c","7","Rumex obtusifolia",0
+"371","october","c","8","Rumex obtusifolia",28.8
+"372","may","c","9","Rumex obtusifolia",0
+"373","october","a","1","Semecio jacobaea",0
+"374","march","d","10","Semecio jacobaea",0
+"375","october","d","11","Semecio jacobaea",0
+"376","may","d","12","Semecio jacobaea",0
+"377","may","a","2","Semecio jacobaea",0
+"378","march","a","3","Semecio jacobaea",0
+"379","may","b","4","Semecio jacobaea",0
+"380","march","b","5","Semecio jacobaea",0
+"381","october","b","6","Semecio jacobaea",2
+"382","march","c","7","Semecio jacobaea",0
+"383","october","c","8","Semecio jacobaea",0
+"384","may","c","9","Semecio jacobaea",0
+"385","october","a","1","Sonchus asper",0
+"386","march","d","10","Sonchus asper",0
+"387","october","d","11","Sonchus asper",0
+"388","may","d","12","Sonchus asper",8
+"389","may","a","2","Sonchus asper",16
+"390","march","a","3","Sonchus asper",0
+"391","may","b","4","Sonchus asper",25.6
+"392","march","b","5","Sonchus asper",0
+"393","october","b","6","Sonchus asper",0
+"394","march","c","7","Sonchus asper",0
+"395","october","c","8","Sonchus asper",0
+"396","may","c","9","Sonchus asper",24
+"397","october","a","1","Spergula arvensis",0
+"398","march","d","10","Spergula arvensis",17.3333333333333
+"399","october","d","11","Spergula arvensis",20.8
+"400","may","d","12","Spergula arvensis",2.66666666666667
+"401","may","a","2","Spergula arvensis",14.4
+"402","march","a","3","Spergula arvensis",0
+"403","may","b","4","Spergula arvensis",38.4
+"404","march","b","5","Spergula arvensis",1.6
+"405","october","b","6","Spergula arvensis",6
+"406","march","c","7","Spergula arvensis",1.6
+"407","october","c","8","Spergula arvensis",16
+"408","may","c","9","Spergula arvensis",214.4
+"409","october","a","1","Stellaria graminea",22.4
+"410","march","d","10","Stellaria graminea",0
+"411","october","d","11","Stellaria graminea",1.6
+"412","may","d","12","Stellaria graminea",16
+"413","may","a","2","Stellaria graminea",0
+"414","march","a","3","Stellaria graminea",0
+"415","may","b","4","Stellaria graminea",0
+"416","march","b","5","Stellaria graminea",0
+"417","october","b","6","Stellaria graminea",0
+"418","march","c","7","Stellaria graminea",33.6
+"419","october","c","8","Stellaria graminea",0
+"420","may","c","9","Stellaria graminea",0
+"421","october","a","1","Taraxacum officinale",16
+"422","march","d","10","Taraxacum officinale",0
+"423","october","d","11","Taraxacum officinale",0
+"424","may","d","12","Taraxacum officinale",0
+"425","may","a","2","Taraxacum officinale",1.6
+"426","march","a","3","Taraxacum officinale",1.33333333333333
+"427","may","b","4","Taraxacum officinale",3.2
+"428","march","b","5","Taraxacum officinale",0
+"429","october","b","6","Taraxacum officinale",2
+"430","march","c","7","Taraxacum officinale",0
+"431","october","c","8","Taraxacum officinale",0
+"432","may","c","9","Taraxacum officinale",11.2
+"433","october","a","1","Tripleurospermum inodorum ",19.2
+"434","march","d","10","Tripleurospermum inodorum ",0
+"435","october","d","11","Tripleurospermum inodorum ",3.2
+"436","may","d","12","Tripleurospermum inodorum ",0
+"437","may","a","2","Tripleurospermum inodorum ",0
+"438","march","a","3","Tripleurospermum inodorum ",0
+"439","may","b","4","Tripleurospermum inodorum ",0
+"440","march","b","5","Tripleurospermum inodorum ",0
+"441","october","b","6","Tripleurospermum inodorum ",4
+"442","march","c","7","Tripleurospermum inodorum ",0
+"443","october","c","8","Tripleurospermum inodorum ",1.6
+"444","may","c","9","Tripleurospermum inodorum ",0
+"445","october","a","1","Veronica arvensis",0
+"446","march","d","10","Veronica arvensis",12
+"447","october","d","11","Veronica arvensis",0
+"448","may","d","12","Veronica arvensis",13.3333333333333
+"449","may","a","2","Veronica arvensis",0
+"450","march","a","3","Veronica arvensis",1.33333333333333
+"451","may","b","4","Veronica arvensis",0
+"452","march","b","5","Veronica arvensis",0
+"453","october","b","6","Veronica arvensis",0
+"454","march","c","7","Veronica arvensis",0
+"455","october","c","8","Veronica arvensis",0
+"456","may","c","9","Veronica arvensis",0
+"457","october","a","1","Veronica persica",1.6
+"458","march","d","10","Veronica persica",0
+"459","october","d","11","Veronica persica",9.6
+"460","may","d","12","Veronica persica",0
+"461","may","a","2","Veronica persica",20.8
+"462","march","a","3","Veronica persica",0
+"463","may","b","4","Veronica persica",27.2
+"464","march","b","5","Veronica persica",1.6
+"465","october","b","6","Veronica persica",0
+"466","march","c","7","Veronica persica",3.2
+"467","october","c","8","Veronica persica",0
+"468","may","c","9","Veronica persica",19.2
+"469","october","a","1","Viola arvensis",8
+"470","march","d","10","Viola arvensis",0
+"471","october","d","11","Viola arvensis",0
+"472","may","d","12","Viola arvensis",0
+"473","may","a","2","Viola arvensis",0
+"474","march","a","3","Viola arvensis",1.33333333333333
+"475","may","b","4","Viola arvensis",0
+"476","march","b","5","Viola arvensis",28.8
+"477","october","b","6","Viola arvensis",0
+"478","march","c","7","Viola arvensis",9.6
+"479","october","c","8","Viola arvensis",0
+"480","may","c","9","Viola arvensis",0
+"481","october","a","1","Vulpia myuros ",11.2
+"482","march","d","10","Vulpia myuros ",33.3333333333333
+"483","october","d","11","Vulpia myuros ",0
+"484","may","d","12","Vulpia myuros ",0
+"485","may","a","2","Vulpia myuros ",0
+"486","march","a","3","Vulpia myuros ",0
+"487","may","b","4","Vulpia myuros ",0
+"488","march","b","5","Vulpia myuros ",0
+"489","october","b","6","Vulpia myuros ",4
+"490","march","c","7","Vulpia myuros ",1.6
+"491","october","c","8","Vulpia myuros ",0
+"492","may","c","9","Vulpia myuros ",0
