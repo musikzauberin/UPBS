@@ -2,6 +2,11 @@
 ################## Wrangling the Pound Hill Dataset ############
 ################################################################
 
+################################################
+# Set Directory
+getwd()
+setwd("/Users/jialelim/Documents/github/UPBS/newCode")
+
 # Newly Added, extention of DataWrang.R
 
 ############# Load the dataset ###############
@@ -46,7 +51,7 @@ str(MyWrangledData)
 head(MyWrangledData)
 dim(MyWrangledData)
 
-############# Start exploring the data!  ###############
+############# Start exploring the data! (General Visualisation) ###############
 
 # Let's visualise the spread of Counts for all Species
 plot(Count~Species, data = MyWrangledData)
@@ -66,40 +71,45 @@ plot(Count~Species, data = MyWrangledData, las = 2)
 par(mar=c(12,5,1,1))
 plot(Count~Species, data = MyWrangledData, las = 2, xlab = "") # remove x axis label
 mtext("Species", side=1, line=10, las = 1) # add manually
+# not very informative, let's move on to other ways of visualising data
 
-# reorganising data
+############# Calculating Species Richness & Shannon's diversity index (Data Manipulation) #############
 library(reshape2)
 library(plyr)
+
 # Calculating total number of individuals per plot
 totalcount <- tapply(MyWrangledData$Count, list(MyWrangledData$Plot, MyWrangledData$Species), sum, na.rm = TRUE)
 totalcount
 
-# Calculate number of quadrats per plot and store as column in totalcount
+# Calculate number of quadrats per plot 
 quadno <- ddply(MyWrangledData, c("Plot"), summarise, Quadrat.number = length(unique(Quadrat)))
-DF <- cbind(totalcount, quadno$Quadrat.number) # combine columns of totalcount and quadrat.no 
-colnames(DF)[ncol(DF)] <- "Quadrat.no" # add column name to last column of DF.meancount
-
-DF
+quadno
 
 # Calculate mean number of counts of each species per quadrat in each plot
-# divide all columns except the last column by the last column (no.of quadrat per plot)
-# multiply by 8 to calculate counts / m^2 for each species for each plot
-DF.meancount <- DF[, 1:(ncol(DF)-1)] / DF[, ncol(DF)] *8 
-DF.meancount
+# divide all columns by no.of quadrat per plot, multiply by 8 to calculate counts / m^2 for each species for each plot
+meancount <- totalcount / quadno[,2] * 8
+meancount
 
-# rearrange into Plot Species and Count variables
-DF.Count <- melt(DF.meancount, id=c("Plot", "Species"), 
-           varnames = c("Plot", "Species") , value.name = "Count")
-head(DF.Count)
+# Assign Cultivation and Treatment block to the corresponding Plot
+x.variables <- ddply(MyWrangledData, c("Plot"), summarise, Block = unique(Block), Cultivation = unique(Cultivation))
+x.variables
 
-# reorder using plot number
-PlotData <- DF.Count[order(DF.Count$Plot),]
+# Combine with meancount/ add information to meancount
+tempDF <- cbind(meancount, x.variables)
+head(tempDF)
 
-head(PlotData)
+# rearrange into Plot Species and Count variables # convert from wide to long format
+MyNewDF <- melt(tempDF, id=c("Cultivation", "Block", "Plot"), 
+                       variable.name = "Species", value.name = "Count")
+head(MyNewDF)
+str(MyNewDF)
 
-# replace Count with presence/absence data # PlotData[,3] 3rd column of PlotData
-PlotData[PlotData[,3] > 0, 3] <- 1 
+# duplicate MyNewDF and replace all counts more than zero with 1 (Presence-Absence Data)
+PADF <- MyNewDF
+PADF[PADF[,5] > 0, 5] <- 1 #{PADF[,5] > 0}: all values more than 0 in the fifth column of PADF
+head(PADF)
 
+# 
 SpeciesPerPlot <- tapply(PlotData$Count, list(PlotData$Plot), sum, na.rm = TRUE)
 
 SpeciesPerPlot
