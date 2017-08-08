@@ -13,6 +13,6 @@ PP_Lattice.R | PP_ggplot.R | **Scatterplot:** PreyMass~PredatorMass <br/>  **Rat
 
 Source | Data file | Script | Data Management | Visualisation | Analysis | Comments |
 --- | --- |--- |--- |--- |--- |--- |
---- | PoundHillData.csv | PoundHillData.R | melt, tapply, ddply, cbind, for loop, replace values, extract rows| ggplot: boxplot and saving 2 subplots in a PDF| Species Richness, Shannon diversity index | two different methods to calculate Shannon, with and without for loop|
+--- | PoundHillData.csv | PoundHillData.R | melt, tapply, ddply, cbind, for loop, replace values, extract rows| ggplots: PoundHill_ShannonIndexes.pdf PoundHill_SpeciesRichness.pdf | Species Richness, Shannon diversity index | two different methods to calculate Shannon, with and without for loop|
 C.elegans expression| --- | --- |--- |--- |--- |--- |
 Climate map contour| --- | --- |--- |--- |--- |--- |
