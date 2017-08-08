@@ -1,7 +1,7 @@
 
 # Added ggplots
 
-old script | new script | Newly Added | New Plot Name | Old Plot Name | 
+Old script | Updated/New script | Newly Added | New Plot Name | Old Plot Name | 
 --- | --- | --- |---: |---: |
 GenomeSize.R | GenomeSize_plots.R | Scatterplot: <br/> Total Length ~ Genome Size | GenomeSize_ggplot.pdf | GenomeSize.pdf | 
 regress.R | regress_plots.R | Scatterplot: Body Weight ~ Genome Size & LM | Diagmod_ggplot.pdf | DiagMod.pdf | 
@@ -11,8 +11,8 @@ PP_Lattice.R | PP_ggplot.R | **Scatterplot:** PreyMass~PredatorMass <br/>  **Rat
 
 # New datasets
 
-Source | Datafile | Script | Data Management | Visualisation | Analysis | Comments |
+Source | Data file | Script | Data Management | Visualisation | Analysis | Comments |
 --- | --- |--- |--- |--- |--- |--- |
---- | PoundHillData.csv | PoundHillData.R |--- |--- |--- |--- |
+--- | PoundHillData.csv | PoundHillData.R | melt, tapply, ddply, cbind, for loop, replace values, extract rows| ggplot: boxplot and saving 2 subplots in a PDF| Species Richness, Shannon diversity index | two different methods to calculate Shannon, with and without for loop|
 C.elegans expression| --- | --- |--- |--- |--- |--- |
 Climate map contour| --- | --- |--- |--- |--- |--- |
