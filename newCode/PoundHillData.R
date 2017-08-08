@@ -73,11 +73,11 @@ plot(Count~Species, data = MyWrangledData, las = 2, xlab = "") # remove x axis l
 mtext("Species", side=1, line=10, las = 1) # add manually
 # not very informative, let's move on to other ways of visualising data
 
-############# Calculating Species Richness & Shannon's diversity index (Data Manipulation) #############
+############# Calculating Species Richness (Data Manipulation) #############
 library(reshape2)
 library(plyr)
 
-# Calculating total number of individuals per plot
+# Calculating total number of individuals per species per plot
 totalcount <- tapply(MyWrangledData$Count, list(MyWrangledData$Plot, MyWrangledData$Species), sum, na.rm = TRUE)
 totalcount
 
@@ -86,7 +86,7 @@ quadno <- ddply(MyWrangledData, c("Plot"), summarise, Quadrat.number = length(un
 quadno
 
 # Calculate mean number of counts of each species per quadrat in each plot
-# divide all columns by no.of quadrat per plot, multiply by 8 to calculate counts / m^2 for each species for each plot
+# divide all columns by no.of quadrats per plot, multiply by 8 to calculate counts / m^2 for each species for each plot
 meancount <- totalcount / quadno[,2] * 8
 meancount
 
@@ -116,28 +116,79 @@ head(PAData)
 SpeciesRichness <- ddply(PAData, c("Cultivation", "Block", "Plot"), summarise, SpeciesNo = sum(Count))
 SpeciesRichness
 
+############# Calculating Shannon's diversity index (Data Manipulation) #############
+
+# Calculate total number of Counts per Plot
+CountPerPlot <- ddply(MyNewDF, c("Plot"), summarise, CountPerPlot = sum(Count))
+CountPerPlot
+
+## Method 1
+# extract rows in which Plot = '1' and Count > 0
+Plot1 <- MyNewDF[which(MyNewDF$Plot=='1' & MyNewDF$Count > 0), ]
+Plot1
+
+CountPerPlot[CountPerPlot$Plot=='1', 2] # sum of counts in Plot 1
+# divide 'Count' column by the sum of counts in Plot 1
+proportion1 <- Plot1[, 5] / CountPerPlot[CountPerPlot$Plot=='1', 2]
+proportion1
+
+# calculate shannon diversity index for plot 1, H'=-\sum _{i=1}^{R}p_{i}\ln p_{i} (Wikipedia)
+shannon1 <- -sum(proportion1 * log(proportion1))
+shannon1
+
+# Calculate shannon diversity index of other plots in exactly the same way, replacing 1 with other numbers.
+# for example
+Plot2 <- MyNewDF[which(MyNewDF$Plot=='2' & MyNewDF$Count > 0), ]
+proportion2 <- Plot2[, 5] / CountPerPlot[CountPerPlot$Plot=='2', 2]
+shannon2 <- -sum( proportion2* log(proportion2))
+
+# combine all shannon indexes of the different plots into a vector
+# for example
+shannon.indexes1 <- c(shannon1, shannon2)
+shannon.indexes1
+
+## Method 2
+# Otherwise, we can use a for loop to calculate shannon index of all 12 plots.
+
+# find the number of unique levels in Plot and store as Plot_No
+Plot_No <- length(unique(CountPerPlot$Plot)) 
+
+ShannonIndexes <- vector(length=Plot_No) # create an empty vector with the length Plot_No
+
+for (i in 1:Plot_No){       # same as: for (i in 1:12){  # to iterate from 1 to 12/ repeat loop for each i value from 1:12
+  Plot <- MyNewDF[which(MyNewDF$Plot==i & MyNewDF$Count > 0), ]
+  proportion <- Plot[, 5] / CountPerPlot[CountPerPlot$Plot==i, 2]
+  ShannonIndexes[i] <- -sum( proportion* log(proportion))    
+  # calculate shannon index for plot i and store as shannon.indexes[i]
+}
+
+ShannonIndexes
+length(ShannonIndexes) # check if there are 12 indexes
+length(ShannonIndexes) == 12 # replies if length = 12, if yes = TRUE
+
+# reorder SpeciesRichness rows according to Plot
+SpeciesRichness <- SpeciesRichness[order(as.numeric(as.character(SpeciesRichness$Plot))), ]
+# as.numeric(as.character(SpeciesRichness$Plot)) allows R to arrange according to ascending order 
+# and not according to the first character, ex (1, 10, 11, 12, 2, 3, 4, ...)
+
+PlotInfo <- cbind(SpeciesRichness, ShannonIndexes)
+PlotInfo
 # export data as .csv file
-write.csv(SpeciesRichness, file = "../Results/PoundHillSpeciesRichness.csv")
+write.csv(PlotInfo, file = "../Results/PoundHill_PlotInfo.csv")
 
-# calculate Shannon's diversity index
-sum(SpeciesRichness$SpeciesNo)
-
-
-
-############# Data Visualisation #############
+############# Data Visualisation for Species Richness #############
 library(ggplot2)
+library(gridExtra)
 
-boxplot <- ggplot(SpeciesRichness, aes(x = Cultivation, y = SpeciesNo)) +
+boxplot1 <- ggplot(PlotInfo, aes(x = Cultivation, y = SpeciesNo)) +
   stat_boxplot(geom = 'errorbar') +           # add whiskers to boxplots
   geom_boxplot(aes(fill = Cultivation), alpha = 0.3)  + 
   geom_jitter(aes(fill = Cultivation), width = 0.3, alpha = 0.5, size = 2) +
   labs(x = "Cultivation month", y = "Mean Number of Species") + # x and y axis labels
   theme(legend.position="none") # remove all legends
-boxplot
+boxplot1
 
-ggsave('../Results/PoundHill_CultivationSpeciesRichness.pdf', height=5, width=10)
-
-boxplot2 <- ggplot(SpeciesRichness, aes(x = Block, y = SpeciesNo)) +
+boxplot2 <- ggplot(PlotInfo, aes(x = Block, y = SpeciesNo)) +
   stat_boxplot(geom = 'errorbar') +           # add whiskers to boxplots
   geom_boxplot(aes(fill = Block), alpha = 0.3)  + 
   geom_jitter(aes(fill = Block), width = 0.3, alpha = 0.5, size = 2) +
@@ -145,5 +196,31 @@ boxplot2 <- ggplot(SpeciesRichness, aes(x = Block, y = SpeciesNo)) +
   theme(legend.position="none") # remove all legends
 boxplot2
 
-ggsave('../Results/PoundHill_BlockSpeciesRichness.pdf', height=5, width=10)
+# save plots
+ggsave('../Results/PoundHill_SpeciesRichness.pdf', 
+       arrangeGrob(boxplot1, boxplot2, ncol = 2), # save both boxplots in one pdf with two columns
+       height=5, width=10) # dimensions of pdf
+
+############# Data Visualisation for Shannon Indexes #############
+
+boxplot3 <- ggplot(PlotInfo, aes(x = Cultivation, y = ShannonIndexes)) +
+  stat_boxplot(geom = 'errorbar') +           # add whiskers to boxplots
+  geom_boxplot(aes(fill = Cultivation), alpha = 0.3)  + 
+  geom_jitter(aes(fill = Cultivation), width = 0.3, alpha = 0.5, size = 2) +
+  labs(x = "Cultivation month", y = "Shannon Diversity Index") + # x and y axis labels
+  theme(legend.position="none") # remove all legends
+boxplot3
+
+boxplot4 <- ggplot(PlotInfo, aes(x = Block, y = ShannonIndexes)) +
+  stat_boxplot(geom = 'errorbar') +           # add whiskers to boxplots
+  geom_boxplot(aes(fill = Block), alpha = 0.3)  + 
+  geom_jitter(aes(fill = Block), width = 0.3, alpha = 0.5, size = 2) +
+  labs(x = "Treatment Block", y = "Shannon Diversity Index") + # x and y axis labels
+  theme(legend.position="none") # remove all legends
+boxplot4
+
+# save plots
+ggsave('../Results/PoundHill_ShannonIndexes.pdf', 
+       arrangeGrob(boxplot3, boxplot4, ncol = 2), # save both boxplots in one pdf with two columns
+       height=5, width=10) # dimensions of pdf
 
