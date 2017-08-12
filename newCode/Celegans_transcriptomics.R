@@ -34,6 +34,8 @@ head(plotData)
 
 ############# Basic Visualisation  ###############
 # we can plot them all on the same plot for a quick look
+require(ggplot2)
+
 summaryplot <- ggplot(plotData, aes(x = time_min, y = RelativeExpression, colour = Genes)) + # ggplot(dataframe, what to plot)
   geom_point(alpha = I(0.5), size = 3) +  # plot dots, adjust transparency and size
   geom_line() +  # join dots with lines
@@ -43,7 +45,6 @@ summaryplot
 # can we get a better spread of data by log(Time) ?
 summaryplot2 <- ggplot(plotData, aes(x = log(time_min), y = RelativeExpression, colour = Genes)) + # log x axis
   geom_point(size = 3) +  # plot dots, adjust transparency and size
-  geom_line() +  # join dots with lines
   scale_color_brewer(palette="Paired") +   # change color palette to better distinguish bet genes
   labs(x = "log(Time / min)", y = "Relative gene expression") # x and y axis labels
 summaryplot2
@@ -80,7 +81,7 @@ require(scales)
 
 str(plotData)
 # set the basic model
-LinearModel<-function(plotData){lm(RelativeExpression ~ time_min, data = plotData)}
+LinearModel<-function(input){lm(RelativeExpression ~ time_min, data = input)}
 # function(input) {what to do with input/ linear model relative exp against time, using input data}
 
 # using plyr to iterate over all genes
@@ -117,7 +118,7 @@ Coeffs
 
 # find only adjusted r values
 # ?summary.lm
-adjR<-function(data){summary(lm(data$RelativeExpression ~ data$time_min), data=data)$adj.r.squared}
+adjR<-function(input){summary(lm(input$RelativeExpression ~ input$time_min), data=input)$adj.r.squared}
 adjRvalues<-dlply(plotData,.(Genes), adjR)
 adjRvalues
 allRvalues <- as.numeric(as.character(adjRvalues))
@@ -159,8 +160,8 @@ library(bitops)
 library(RColorBrewer)
 
 # Make a distance matrix: specify the columns that the data are in.
-head(tempData)
-DistanceMatrix<-dist(tempData[,2:ncol(tempData)], method = "euclidean", diag = TRUE, upper = TRUE, p = 2)
+head(ExpData)
+DistanceMatrix<-dist(ExpData[,3:ncol(ExpData)], method = "euclidean", diag = TRUE, upper = TRUE, p = 2)
 
 # see that you've made your datamatrix.  You should see a grid of pairwise distances.
 list(DistanceMatrix)
@@ -169,24 +170,24 @@ list(DistanceMatrix)
 my_palette <- colorRampPalette(c("dark green", "yellow", "red"))(n = 299)
 
 # Make the two-way cluster and heatmap.  Again specify the columns that your data are in. Also specify the label. 
-pdf(file = "../Results/Celegans_heatmap", width=11, height=8)
+pdf(file = "../Results/Celegans_heatmap.pdf", width=11, height=8)
 
-heatmap<-heatmap.2(data.matrix(tempData[,2:ncol(tempData)]), # for more info check out ?heatmap.2
+heatmap<-heatmap.2(data.matrix(ExpData[,3:ncol(ExpData)]), # for more info check out ?heatmap.2
                    col = my_palette,     # alternatively, try col=bluered(25)
                    main = "C. elegans gene expression", # heat map title
                    ylab = "Time/min",
                    xlab = "Genes",
-                   density.info="none",  # turns off density plot inside color legend
-                   trace="none",         # turns off trace lines inside the heat map
-                   margins =c(5,5),      # widens margins around plot 
+                   density.info = "none",  # turns off density plot inside color legend
+                   trace = "none",         # turns off trace lines inside the heat map
+                   margins = c(5,5),      # widens margins around plot 
                    colsep = 1:55, sepcolor='white', sepwidth=0.05, # create white separation bet cols
-                   symkey=TRUE,
-                   dendrogram="column",
-                   labRow=tempData$time_min, # rows in heatmap refer to time
-                   scale=c("col"),
+                   symkey = TRUE,
+                   dendrogram = "column",
+                   labRow = ExpData$time_min, # rows in heatmap refer to time
+                   scale = c("col"),
                    srtCol = 45, # rotate labels
-                   Rowv=FALSE,
-                   hclustfun=function(DistanceMatrix) hclust((DistanceMatrix),method="ward.D2"))
+                   Rowv = FALSE,
+                   hclustfun = function(DistanceMatrix) hclust((DistanceMatrix),method="ward.D2"))
 
 dev.off()
 
