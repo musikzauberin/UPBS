@@ -16,6 +16,7 @@ setwd("/Users/jialelim/Documents/github/UPBS/newCode")
 # Developmental milestones punctuate gene expression in the Caenorhabditis embryo. 
 # Dev Cell, 22, 1101-8. doi:10.1016/j.devcel.2012.04.004
 
+#################
 # import Data
 rpl_data <- read.csv("../Data/rpl_data.csv", header = TRUE)
 
@@ -49,7 +50,7 @@ colnames(lincoef) <- c("gene", "intercept", "linear")
 lincoef <-lincoef [order(-lincoef $linear),]
 head(lincoef)
 
-multi1 <- ggplot(plotData, aes(x = time_min, y = rel_expression)) +
+multi1 <- ggplot(plotData, aes(x = log(time_min), y = rel_expression)) +
   geom_point(alpha = I(0.5)) +                 
   labs(x = "log (Prey mass / Predator Mass)") +  # x and y axis labels
   scale_color_brewer(palette="Dark2") +          # change color palette 
@@ -78,7 +79,7 @@ list(DistanceMatrix)
 
 
 # Make the two-way cluster and heatmap.  Again specify the columns that your data are in. Also specify the label. 
-
+plot.new()
 heatmap<-heatmap.2(data.matrix(tempData[,2:ncol(tempData)]), 
                    col=bluered(25), 
                    trace="none",
