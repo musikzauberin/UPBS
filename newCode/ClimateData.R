@@ -38,21 +38,45 @@ summaryplot2 <- ggplot(plotData, aes(x = Location, y = Temperature, fill = Locat
   labs(x = "Month", y = "Temperature") # x and y axis labels
 summaryplot2
 
+ggsave('../Results/Climate_location.pdf', height=5, width=10)
+
 # plot all datapoints, quick look, categorised by Year
-summaryplot2 <- ggplot(plotData, aes(x = Location, y = Temperature, colour = Year)) + # ggplot(dataframe, what to plot)
+summaryplot3 <- ggplot(plotData, aes(x = Location, y = Temperature, colour = Year)) + # ggplot(dataframe, what to plot)
   geom_point(alpha = I(0.5), size = 3) +  # plot dots, adjust transparency and size
-  labs(x = "Time / min", y = "Relative gene expression") # x and y axis labels 
-summaryplot2
-
-# can we get a better spread of data by log(Time) ?
-summaryplot2 <- ggplot(plotData, aes(x = log(time_min), y = RelativeExpression, colour = Genes)) + # log x axis
-  geom_point(size = 3) +  # plot dots, adjust transparency and size
-  scale_color_brewer(palette="Paired") +   # change color palette to better distinguish bet genes
-  labs(x = "log(Time / min)", y = "Relative gene expression") # x and y axis labels
-summaryplot2
-
-# or we can plot them separately in a multifacets plot
-summaryplot3 <- summaryplot2 +
-  facet_wrap(~Genes, ncol = 4) +  # facet based on Location and maximum 11 plots each row
-  theme(legend.position="none") # remove all legends
+  labs(x = "Month", y = "Temperature") # x and y axis labels 
 summaryplot3
+
+# How can we make this more clear?
+# What if we group the years into decades?
+# Data Manipulation
+
+# create 3 year categories # Create a new variable, Decade
+str(plotData)
+
+attach(plotData)
+plotData$Decade[Year <= 1960] <- "1951-1960"
+plotData$Decade[Year > 1960 & Year <= 1970] <- "1961-1970"
+plotData$Decade[Year > 1970] <- "1971-1980"
+detach(plotData)
+
+head(plotData)
+str(plotData) 
+
+# plot all datapoints, quick look, categorised by Year
+summaryplot4 <- ggplot(plotData, aes(x = Location, y = Temperature, fill = Decade)) + # ggplot(dataframe, what to plot)
+  stat_boxplot(geom = 'errorbar') +           # add whiskers to boxplots
+  geom_boxplot(lwd = 0.6)  +    
+  labs(x = "Location", y = "Temperature") # x and y axis labels
+summaryplot4
+
+ggsave('../Results/Climate_decade.pdf', height=5, width=10)
+
+############# Basic Analysis  ###############
+# do temperatures of different locations differ from each other significantly
+TemperatureLocationLM <- lm(Temperature ~ Location, data = plotData)
+summary(TemperatureLocationLM)
+anova(TemperatureLocationLM)
+
+par(mfrow = c(2, 2), mar = c(5, 5, 1.5, 1.5))
+plot(TemperatureLocationLM) # model diagnostics
+
