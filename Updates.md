@@ -15,4 +15,4 @@ Source | Data file | Script | Data Management | Visualisation | Analysis | Comme
 --- | --- |--- |--- |--- |--- |--- |
 --- | PoundHillData.csv | PoundHillData.R | melt, tapply, ddply, cbind, for loop, replace values, extract rows| ggplots: PoundHill_ShannonIndexes.pdf PoundHill_SpeciesRichness.pdf | Species Richness, Shannon diversity index | two different methods to calculate Shannon, with and without for loop|
 Levin et al (2012) Biodiversity Genomics final year module | Celegans_transcriptomics.csv (Original Data file : original_evodevomics.csv) | Celegans_transcriptomics.R | melt, reshape, extract columns | Celegans_summary.pdf, Celegans_heatmap.pdf | linearmodel and quadraticmodels, creating function and using dlply to iterate function over multiple genes, distance-matrixes | Note: script and data edited from those provided in BGmodule, analysis may be slightly too complicated for undergraduate |
-Climate map contour| --- | --- |--- |--- |--- |--- |
+Data folder in SilBioComp Old Script:TimeSer.R | ClimateData.csv  | ClimateData.R | melt, adding a new variable using R | boxplot, facets | simple anova |--- |
